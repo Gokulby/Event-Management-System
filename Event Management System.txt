@@ -17,8 +17,17 @@ public class EventManagement {
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.println("\t\t____EVENT MANAGEMENT WELCOMES YOU____\n\t\t\t Lets move to Registration");
                     sc.nextLine();
-                    System.out.print("\nStudent name       : ");
-                    String stdName = sc.nextLine();
+                    String stdName;
+                    while (true) {
+                        System.out.print("\nStudent name       : ");
+                        stdName = sc.nextLine();
+                        if (stdName.matches("[a-zA-Z ]+")) {
+                            break;
+                        } else {
+                            System.out.println("Invalid name. Please enter a name.");
+                            
+                        }
+                    }
                     String gender;
                     while (true) {
                         System.out.print("Gender             : ");
